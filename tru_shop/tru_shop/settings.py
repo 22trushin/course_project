@@ -37,9 +37,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # debug:
+    'debug_toolbar',
+
+    # my_apps
+    'book_catalogue',
 ]
 
 MIDDLEWARE = [
+    # debug:
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+
+    # basic:
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
